@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>일본 여행 가이드</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-brand {
+      font-size: 24px; /* 폰트 사이즈 조정 */
+      font-weight: bold; /* 폰트 굵기 조정 */
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+    }
+    .navbar {
+      margin-bottom: 30px;
+    }
+    .section {
+      padding: 60px 0;
+    }
+    .bg-light {
+      background-color: #f8f9fa !important;
+    }
+    .bg-primary {
+      background-color: #ffffff !important;
+      color: black;
+    }
+    .bg-secondary {
+      background-color: #f18ce2 !important;
+      color: white;
+    }
+    .bg-success {
+      background-color: #f951e0 !important;
+      color: black;
+    }
+    .bg-info {
+      background-color: #e01ec3 !important;
+      color: black;
+    }
+    h2 {
+      margin-bottom: 30px;
+    }
+    .carousel-inner img,
+    .attraction-item img {
+      width: 100%;
+      height: auto;
+    }
+    .modal-body img {
+      max-width: 100%;
+      height: auto;
+    }
+    footer {
+      background-color: #f8f9fa;
+      padding: 20px 0;
+    }
+    .attraction-item {
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .btn-details {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+    iframe {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <!-- 내비게이션 바 - 항목을 변경하거나 추가할 수 있습니다 -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">일본 여행 - 10202 고윤환</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#overview">개요</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#history">역사</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#attractions">관광지</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#tips">여행 팁</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 개요 섹션 -->
+  <section id="overview" class="section bg-primary">
+    <div class="container">
+      <h2 class="text-center">개요</h2>
+      <p>일본은 동아시아에 위치한 섬나라로, 세계에서 세 번째로 경제 규모가 큰 나라입니다. 이 나라는 역사적으로 독특하고 다채로운 문화, 고도로 발달한 과학 기술, 그리고 현대적인 생활 방식으로 유명합니다.</p>
+      <!-- 이미지 슬라이드 - 이미지를 변경하려면 src 속성 값을 수정하세요 -->
+      <div id="overviewCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/universal.jpg" class="d-block w-100" alt="일본 개요 1">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/오사카성.png" class="d-block w-100" alt="일본 개요 2">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/일본.jpg" class="d-block w-100" alt="일본 개요 3">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/후지산.png" class="d-block w-100" alt="일본 개요 4">
+          </div>
+          <div class="carousel-item">
+            <!-- 여기에 이미지 파일명을 추가하세요 -->
+            <img src="images/독특.jpg" class="d-block w-100" alt="일본 개요 5">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#overviewCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">이전</span>
+        </a>
+        <a class="carousel-control-next" href="#overviewCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">다음</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 역사 섹션 -->
+  <section id="history" class="section bg-secondary">
+    <div class="container">
+      <h2 class="text-center">일본의 역사</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/일본 역사 1.jpg" alt="고대와 중세, 시무라와 전국 통일" class="img-fluid">
+            <p>고대와 중세, 시무라와 전국 통일</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#historyModal1">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/일본 역사 2.jpg" alt="무사와 무쇠, 에도" class="img-fluid">
+            <p>무사와 무쇠, 에도</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#historyModal2">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/일본 역사 3.jpg" alt="국제적 성장, 현대화" class="img-fluid">
+            <p>국제적 성장, 현대화</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#historyModal3">상세보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 모달 - 역사 1 -->
+  <div class="modal fade" id="historyModal1" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historyModalLabel1">고대와 중세, 그리고 시무라와 전국 통일</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/일본 역사 1.jpg" alt="일본 역사 1" class="img-fluid">
+          <p>약 3,000년 전부터 시작된 일본의 역사는 쥐, 토릭, 다이몬 등의 다양한 왕조가 성립하며 농경과 무역이 발전했습니다. 이어서 야마토 국가가 형성되고, 중세에는 불교가 도입되면서 문화적 발전을 이루었습니다. 12세기 후반에 미나모토 요리토모가 시무라 클랜을 건설하여 12세기 중반에 전국을 통일하였습니다. 이는 일본 역사에서 중요한 국가 통합 과정이었습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 역사 2 -->
+  <div class="modal fade" id="historyModal2" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historyModalLabel2">무사와 무쇠 시대, 그리고 에도 시대와 통치 체제 안정</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/일본 역사 2.jpg" alt="일본 역사 2" class="img-fluid">
+          <p>12세기 후반부터 16세기까지는 무사와 무쇠가 중요한 역할을 하였습니다. 무사는 전투와 군사 훈련에서 중요한 위치를 차지하며, 무쇠는 경제적 발전과 무역에서 중요한 역할을 하였습니다. 17세기 초반에는 토쿠가와 이에야스가 에도 성을 기지하여 토쿠가와 쇼군 체제를 성립하였습니다. 이 시기에는 민정과 경제적 번영이 이루어졌습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 역사 3 -->
+  <div class="modal fade" id="historyModal3" tabindex="-1" role="dialog" aria-labelledby="historyModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="historyModalLabel3">국제적 성장과 현대화</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/일본 역사 3.jpg" alt="일본 역사 3" class="img-fluid">
+          <p>19세기 후반에는 일본이 서양 제국주의에 접목되며 국제적으로 성장하고, 20세기에는 일본이 세계 대전을 경험하며 현대화가 진행되었습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 관광지 섹션 -->
+  <section id="attractions" class="section bg-success">
+    <div class="container">
+      <h2 class="text-center">관광지</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/센소지.avif" alt="센소지" class="img-fluid">
+            <p>센소지</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#attractionModal1">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/금각사.webp" alt="금각사" class="img-fluid">
+            <p>금각사</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#attractionModal2">상세보기</a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="attraction-item">
+            <img src="images/기요미즈데라.avif" alt="기요미즈데라" class="img-fluid">
+            <p>기요미즈데라</p>
+            <a href="#" class="btn btn-primary btn-details" data-toggle="modal" data-target="#attractionModal3">상세보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 모달 - 관광지 1 -->
+  <div class="modal fade" id="attractionModal1" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attractionModalLabel1">센소지</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/센소지.avif" alt="센소지" class="img-fluid">
+          <p>아사쿠사 관음사라고도 불리는 이곳은 도쿄에서 가장 오래된 절입니다. 보는 순간 감탄이 절로 터져 나올 겁니다. 센소지라고 하면 많은 관광객이 입구에 있는 거대한 가미나리문에 매달린 큰 등을 떠올립니다. 매년 3천 만명의 신자가 방문하는 것으로 추산되는 이곳은 대자비를 베푸는 보살인 관세음보살을 모시고 있습니다..</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 관광지 2 -->
+  <div class="modal fade" id="attractionModal2" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attractionModalLabel2">금각사</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/금각사.webp" alt="금각사" class="img-fluid">
+          <p>금각사는 교토에서 가장 인기 있는 관광명소 중 한 곳입니다. '금으로 꾸민 누각'이라는 이름에 걸맞게 황금빛 건물이 자리한 선종 사찰인 금각사는 유네스코 세계문화유산으로 지정되었습니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달 - 관광지 3 -->
+  <div class="modal fade" id="attractionModal3" tabindex="-1" role="dialog" aria-labelledby="attractionModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="attractionModalLabel3">기요미즈데라</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img src="images/기요미즈데라.avif" alt="기요미즈데라" class="img-fluid">
+          <p>교토의 동쪽, 숲이 우거진 언덕에 세워진 기요미즈데라에 발을 들이는 순간 과거로 시간 여행을 한 듯한 착각이 듭니다. 유네스코 세계문화유산에 지정된 기요미즈데라는 일본에서 가장 유명한 사찰로 손꼽힙니다.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 여행 팁 섹션 -->
+  <section id="tips" class="section bg-info">
+    <div class="container">
+      <h1 class="text-center">여행 팁</h1>
+	  <h3>1. 준비단계</h3>
+      <ul>
+        <li>여권 유효 기간을 확인하고 필요한 경우 일본 비자를 신청하고 보험에 가입하여 안전을 확보하세요.</li>
+      </ul>
+	  	  <h3>2. 교통</h3>
+      <ul>
+        <li>suica 또는 pasmo 같은 교통카드를 구입하여 교통수단을 편하게 이용하세요. 또한 전철 패스를 고려하세요.</li>
+      </ul>
+	  	  <h3>3. 숙박</h3>
+      <ul>
+        <li>인기 있는 시즌에는 미리 예약하고 교통 편의성을 고려하여 숙소를 선택하세요.</li>
+      </ul>
+	  	  <h3>4. 식사</h3>
+      <ul>
+        <li>일본의 다양한 지역 음식을 즐기기 위해 현지 식당과 가게를 탐방하세요.</li>
+      </ul>
+	  	  <h3>5. 문화와 관광지</h3>
+      <ul>
+        <li>교토의 사원과 신주쿠의 번화가 같은 일본의 인기 관광지를 방문하여 다양한 매력을 즐기세요.</li>
+      </ul>
+      <div class="text-center">
+        <!-- 여기에 YouTube 동영상 링크를 추가하세요 -->
+<iframe width="1000" height="450" src="https://www.youtube.com/embed/WdPqJyEq9m8?si=J9Em1Mj28AGfxNrD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>      </div>
+    </div>
+  </section>
+
+  <footer class="text-center">
+    <p>&copy; 2024 일본 여행 가이드. All rights reserved.</p>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
